@@ -1,22 +1,13 @@
 / {
 	aliases {
-		led-a = &led2_subnode_label;
-		led-b = &led3_subnode_label;
+		training-led = &led2_subnode_label;
 	};
 
 
-	led_childnode2: led_childnode_path2 {
+	led_childnode: led_childnode_path {
 		compatible = "gpio-leds";
 
 		led2_subnode_label: led2_path {
-			gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
-	       	};
-	};
-
-	led_childnode3: led_childnode_path3 {
-		compatible = "gpio-leds";
-
-		led3_subnode_label: led3_path {
 			gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
 		};
 	};
